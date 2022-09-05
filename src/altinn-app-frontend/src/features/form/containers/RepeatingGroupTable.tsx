@@ -99,7 +99,7 @@ const useStyles = makeStyles({
   tableEditButton: {
     color: theme.altinnPalette.primary.blueDark,
     fontWeight: 700,
-    borderRadius: '5px',
+    borderRadius: '18px',
     padding: '6px 12px',
     margin: '8px 2px',
     '&:hover': {
@@ -119,8 +119,8 @@ const useStyles = makeStyles({
     color: theme.altinnPalette.primary.red,
     fontWeight: 700,
     padding: '8px 12px 6px 6px',
-    borderRadius: '0',
-    marginRight: '-12px',
+    borderRadius: '18px',
+    margin: '0px 4px 0px 4px',
     '@media (min-width:768px)': {
       margin: '0',
     },
@@ -295,32 +295,9 @@ export function RepeatingGroupTable({
                     {getTextResource(title, textResources)}
                   </TableCell>
                 ))}
-                <TableCell
-                  style={{ width: '110px', padding: 0 }}
-                  align='left'
-                >
-                  <i
-                    style={{
-                      color: theme.altinnPalette.primary.blueDark,
-                      paddingLeft: '14px',
-                    }}
-                    className={`fa fa-edit ${classes.editIcon}`}
-                  />
-                </TableCell>
+                <TableCell style={{ width: '110px', padding: 0 }} />
                 {!hideDeleteButton && (
-                  <TableCell
-                    style={{ width: '80px', padding: 0 }}
-                    align='left'
-                  >
-                    <i
-                      style={{
-                        color: theme.altinnPalette.primary.red,
-                        paddingLeft: '9px',
-                        paddingBottom: '5px',
-                      }}
-                      className={'ai ai-trash'}
-                    />
-                  </TableCell>
+                  <TableCell style={{ width: '85px', padding: 0 }} />
                 )}
               </TableRow>
             </AltinnTableHeader>
@@ -390,7 +367,7 @@ export function RepeatingGroupTable({
                       </TableCell>
                       {!hideDeleteButton && (
                         <TableCell
-                          align='left'
+                          align='center'
                           style={{ padding: 0 }}
                           key={`delete-${index}`}
                         >
