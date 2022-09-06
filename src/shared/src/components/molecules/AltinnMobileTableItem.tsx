@@ -20,6 +20,7 @@ export interface IMobileTableItem {
 }
 
 export interface IAltinnMobileTableItemProps {
+  tableItemIndex?: number;
   items: IMobileTableItem[];
   valid?: boolean;
   editIndex?: number;
@@ -153,6 +154,7 @@ const useStyles = makeStyles({
 });
 
 export default function AltinnMobileTableItem({
+  tableItemIndex,
   items,
   valid = true,
   editIndex,
@@ -201,7 +203,8 @@ export default function AltinnMobileTableItem({
                   >
                     <IconButton
                       className={cn(classes.tableEditButton, {
-                        [classes.editButtonActivated]: editIndex === index,
+                        [classes.editButtonActivated]:
+                          editIndex === tableItemIndex,
                       })}
                       onClick={onEditClick}
                       data-testid='edit-button'

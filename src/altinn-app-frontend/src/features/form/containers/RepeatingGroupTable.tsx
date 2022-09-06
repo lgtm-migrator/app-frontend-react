@@ -419,6 +419,7 @@ export function RepeatingGroupTable({
                 return (
                   <AltinnMobileTableItem
                     key={index}
+                    tableItemIndex={index}
                     items={items}
                     valid={!rowHasErrors}
                     editIndex={editIndex}
