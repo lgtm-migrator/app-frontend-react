@@ -366,7 +366,7 @@ function SummaryGroupComponent({
           {renderComponents}
         </Grid>
       </Grid>
-      {groupHasErrors && (
+      {groupHasErrors && !display?.hideValidationMessages && (
         <Grid
           container={true}
           style={gridStyle}

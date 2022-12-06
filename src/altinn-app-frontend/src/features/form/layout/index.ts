@@ -315,6 +315,7 @@ export interface IGroupFilter {
 
 export interface SummaryDisplayProperties {
   hideChangeButton?: boolean;
+  hideValidationMessages?: boolean;
   useComponentGrid?: boolean;
   hideBottomBorder?: boolean;
 }
